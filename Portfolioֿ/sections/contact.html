@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact • Roni Givati</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Page Transition -->
+    <div id="page-transition">
+        <div class="transition-background">
+            <img src="../img/logo.png" class="transition-logo" />
+        </div>
+    </div>
+
+   <!-- NAVBAR -->
+<header class="navbar">
+
+  <!-- LOGO נשאר בדיוק כמו אצלך -->
+  <div class="logo">
+    <a href="../index.html"><img src="../img/logo.png" /></a>
+  </div>
+
+  <!-- תפריט CodePen מותאם -->
+  <nav class="navbar__container">
+    <ul class="navbar__menu">
+
+      <li class="navbar__item">
+        <a href="../index.html" class="navbar__link">
+          <i data-feather="home"></i><span>Home</span>
+        </a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="projects.html" class="navbar__link">
+          <i data-feather="folder"></i><span>Projects</span>
+        </a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="contact.html" class="navbar__link">
+          <i data-feather="message-square"></i><span>Contact</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+</header>
+
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact-section">
+
+        <div class="card">
+
+            <!-- Banner Image -->
+            <div class="banner"></div>
+
+            <!-- Circular Photo -->
+            <div class="photo"></div>
+
+            <!-- Name + Title -->
+            <ul class="info-list">
+                <li><b>Roni Givati</b></li>
+                <li>UX/UI Designer</li>
+            </ul>
+
+            <!-- Open Form Button -->
+            <button class="contact" id="main-button">Click to get in touch</button>
+
+            <!-- Socials -->
+            <div class="social-media-banner">
+                <a href="https://www.linkedin.com/in/roni-givati-5897a4388/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/ronigivati?igsh=ZXBsbHRkMTdnZzg2" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/972509529909" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+          <!-- Contact Form -->
+<form class="email-form" action="https://formsubmit.co/ronigivati1@gmail.com" method="POST">
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New message from portfolio contact form">
+
+    <input id="name" type="text" name="name" placeholder="name" required>
+    <input id="email" type="email" name="email" placeholder="email" required>
+    <textarea id="comment" name="message" placeholder="message" required></textarea>
+
+    <button class="contact send-btn" type="submit">Send</button>
+
+</form>
+
+
+
+
+
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-text">© 2025 Roni Givati. Designed & Developed with passion.</p>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="../js/hover-sound.js"></script>
+    <script src="../js/transitions.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+      //https://twitter.com/One_div
+    </script>
+</body>
+
+</html>

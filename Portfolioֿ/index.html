@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roni Givati — Portfolio</title>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/strengths.css">
+  <link rel="stylesheet" href="css/tools.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/wave-animation.css">
+</head>
+
+<body>
+
+<!-- PAGE TRANSITION -->
+<div id="page-transition">
+    <img src="img/logo.png" class="transition-logo">
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+  <!-- LOGO נשאר בדיוק כמו אצלך -->
+  <div class="logo">
+    <a href="index.html"><img src="img/logo.png" /></a>
+  </div>
+
+  <!-- תפריט CodePen מותאם -->
+  <nav class="navbar__container">
+    <ul class="navbar__menu">
+
+      <li class="navbar__item">
+        <a href="index.html" class="navbar__link">
+          <i data-feather="home"></i><span>Home</span>
+        </a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="sections/projects.html" class="navbar__link">
+          <i data-feather="folder"></i><span>Projects</span>
+        </a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="sections/contact.html" class="navbar__link">
+          <i data-feather="message-square"></i><span>Contact</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+
+    <!-- LEFT SIDE -->
+    <div class="hero-text">
+      <h1 class="hero-title">Hi, I'm Roni</h1>
+
+      <p class="hero-subtitle">
+        UX/UI Designer & Web Developer.<br>
+        I design intuitive, user-focused experiences that connect people and technology.<br>
+        Let's create something beautiful together.
+      </p>
+
+      <p class="hero-description">
+        B.A. student in Learning Technologies at HIT, specializing in UX/UI design.<br>
+        Skilled in user-centered design, wireframing, and prototyping with Figma.<br>
+        Combining creativity and analytical thinking to design clear, engaging, and functional digital experiences.
+      </p>
+
+      <!-- BUTTONS -->
+      <div class="hero-buttons">
+        <a href="../Roni_Givati_CV.pdf" target="_blank" class="btn"><span>Resume</span></a>
+        <a href="sections/projects.html" class="btn"><span>Projects</span></a>
+        <a href="sections/contact.html" class="btn"><span>Contact Me</span></a>
+      </div>
+
+    </div> <!-- 🔥🔥🔥 סוף החלק השמאלי – זה היה חסר אצלך -->
+
+
+    <!-- RIGHT SIDE -->
+    <div class="hero-visual">
+      <div class="character-container">
+
+        <div class="character">
+          <div class="speech-bubble">
+            <span class="speech-emoji">👋</span>Hi, I'm Roni!
+          </div>
+          <img src="img/sticker.png" alt="Roni">
+        </div>
+
+        <div class="icon plant">
+          <div class="tooltip"><span class="tooltip-emoji">🌱</span>My plants actually survive!</div>
+          <img src="img/Plant.png" alt="Plant">
+        </div>
+
+        <div class="icon dive">
+          <div class="tooltip"><span class="tooltip-emoji">🌊</span>Diving into new depths!</div>
+          <img src="img/Dive.webp" alt="Dive">
+        </div>
+
+        <div class="icon dog">
+          <div class="tooltip"><span class="tooltip-emoji">🐕</span>Dogs are my favorite!</div>
+          <img src="img/Doberman.webp" alt="Dog">
+        </div>
+
+        <div class="icon color-palette">
+          <div class="tooltip"><span class="tooltip-emoji">🎨</span>Bringing colors to life!</div>
+          <img src="img/Color.webp" alt="Art">
+        </div>
+
+        <div class="icon snowboard">
+          <div class="tooltip"><span class="tooltip-emoji">🏂</span>Riding through fresh powder!</div>
+          <img src="img/womensnowbording.webp" alt="Snowboard">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHAT I BRING SECTION -->
+<section id="strengths">
+  <!-- SVG Filter for glass displacement effect -->
+  <svg style="position: absolute; width: 0; height: 0">
+    <filter
+        id="glass"
+        x="-50%"
+        y="-50%"
+        width="200%"
+        height="200%"
+        primitiveUnits="objectBoundingBox"
+    >
+      <feImage
+          id="glassImage"
+          x="-50%"
+          y="-50%"
+          width="200%"
+          height="200%"
+          result="map"
+      />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.02" result="blur" />
+      <feDisplacementMap
+          in="blur"
+          in2="map"
+          scale="0.8"
+          xChannelSelector="R"
+          yChannelSelector="G"
+      ></feDisplacementMap>
+    </filter>
+  </svg>
+
+  <div class="strengths-wrap">
+    <div class="strengths-header">
+      <h2>What I Bring</h2>
+      <p>Core strengths that drive my design and development approach</p>
+    </div>
+
+    <div class="strengths-container">
+      <div class="strength-item">
+        <div class="glass-circle">
+          <div class="icon-wrapper">👁️</div>
+        </div>
+        <div class="strength-label">Attention to Detail</div>
+      </div>
+
+      <div class="strength-item">
+        <div class="glass-circle">
+          <div class="icon-wrapper">👥</div>
+        </div>
+        <div class="strength-label">Team Player</div>
+      </div>
+
+      <div class="strength-item">
+        <div class="glass-circle">
+          <div class="icon-wrapper">⚡</div>
+        </div>
+        <div class="strength-label">Fast Learner</div>
+      </div>
+
+      <div class="strength-item">
+        <div class="glass-circle">
+          <div class="icon-wrapper">❤️</div>
+        </div>
+        <div class="strength-label">Empathetic Thinking</div>
+      </div>
+
+      <div class="strength-item">
+        <div class="glass-circle">
+          <div class="icon-wrapper">💡</div>
+        </div>
+        <div class="strength-label">Creative Problem-Solving</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS & SKILLS SECTION -->
+<section id="tools" class="tools-skills">
+  <div class="wrap">
+    <h2>Tools & Skills</h2>
+
+    <section class="carousel" aria-label="Tools & Skills carousel">
+      <div class="track" role="list">
+
+        <div class="logo-card"><img class="logo" src="img/Figma.png"><p class="logo-name">Figma</p></div>
+        <div class="logo-card"><img class="logo" src="img/AI.png"><p class="logo-name">Adobe Illustrator</p></div>
+        <div class="logo-card"><img class="logo" src="img/PS.png"><p class="logo-name">Adobe Photoshop</p></div>
+        <div class="logo-card"><img class="logo" src="img/ChatGPT.png"><p class="logo-name">ChatGPT</p></div>
+        <div class="logo-card"><img class="logo" src="img/Unity.png"><p class="logo-name">Unity</p></div>
+        <div class="logo-card"><img class="logo" src="img/ProCreate.png"><p class="logo-name">Procreate</p></div>
+
+        <!-- Duplicate for infinite loop -->
+        <div class="logo-card"><img class="logo" src="img/Figma.png"><p class="logo-name">Figma</p></div>
+        <div class="logo-card"><img class="logo" src="img/AI.png"><p class="logo-name">Adobe Illustrator</p></div>
+        <div class="logo-card"><img class="logo" src="img/PS.png"><p class="logo-name">Adobe Photoshop</p></div>
+        <div class="logo-card"><img class="logo" src="img/ChatGPT.png"><p class="logo-name">ChatGPT</p></div>
+        <div class="logo-card"><img class="logo" src="img/Unity.png"><p class="logo-name">Unity</p></div>
+        <div class="logo-card"><img class="logo" src="img/ProCreate.png"><p class="logo-name">Procreate</p></div>
+
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <p class="footer-text">© 2025 Roni Givati. Designed & Developed with passion.</p>
+  </div>
+</footer>
+
+<script src="js/transitions.js"></script>
+<script src="js/scroll-reveal.js"></script>
+<script src="js/wave-animation.js"></script>
+<script src="js/button-sound.js"></script>
+<script>
+  // Load the displacement map texture for glass effect
+  const feImage = document.querySelector("#glassImage");
+  if (feImage) {
+    fetch("https://essykings.github.io/JavaScript/map.png")
+        .then((response) => {
+            return response.blob();
+        })
+        .then((blob) => {
+            const objURL = URL.createObjectURL(blob);
+            feImage.setAttribute("href", objURL);
+        });
+  }
+</script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+  //https://twitter.com/One_div
+</script>
+
+</body>
+</html>
