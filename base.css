@@ -1,0 +1,104 @@
+/* ================================
+   PAGE TRANSITION – CLEAN VERSION
+   ================================ */
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll; /* תמיד scrollbar → אין קפיצות */
+}
+
+/* מסך המעבר */
+#page-transition {
+    position: fixed;
+    inset: 0;               /* top:0; right:0; bottom:0; left:0 */
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: scaleY(0);   /* סגור בהתחלה */
+    transform-origin: top;
+    z-index: 99999;
+    pointer-events: none;   /* לא מפריע לדף */
+}
+
+/* לוגו במרכז */
+.transition-logo {
+    width: 140px;
+    opacity: 0;
+    transform: scale(0.8); /* אפקט כניסה */
+    transition: opacity .4s ease .2s, transform .4s ease .2s;
+    pointer-events: none;
+}
+
+/* פתיחה */
+#page-transition.active {
+    animation: pageReveal 0.7s ease forwards;
+}
+
+#page-transition.active .transition-logo {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* סגירה */
+#page-transition.close {
+    animation: pageHide 0.7s ease forwards;
+}
+
+#page-transition.close .transition-logo {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* אנימציות */
+@keyframes pageReveal {
+    0%   { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+}
+
+@keyframes pageHide {
+    0%   { transform: scaleY(1); }
+    100% { transform: scaleY(0); }
+}
+
+/* fade-in לדף */
+body {
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* 🔥 Custom Cursor */
+body {
+    cursor: url('../img/icons8-cursor-512.png') 4 4, auto;
+}
+
+/* אופציונלי: כשעוברים על לינקים — סמן אחר */
+a, button {
+    cursor: url('../img/icons8-cursor-512.png') 16 16, pointer;
+}
+
+a:hover, button:hover {
+    cursor: url('../img/cursor2.png') 4 4, pointer;
+}
+
+/* ================================
+   📱 MOBILE SPACING IMPROVEMENTS
+   ================================ */
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+    margin: 20px auto;
+  }
+
+  #page-transition .transition-logo {
+    width: 100px;
+  }
+}

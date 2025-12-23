@@ -1,0 +1,199 @@
+/* =======================================================
+   💎 WHAT I BRING — Glass Effect Strengths
+   ======================================================= */
+
+/* ===== Section Wrapper ===== */
+#strengths {
+  padding: 100px 40px;
+  position: relative;
+}
+
+.strengths-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Section Header ===== */
+.strengths-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.strengths-header h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.strengths-header p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #5a6c7d;
+}
+
+/* ===== Strengths Container ===== */
+.strengths-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: nowrap;
+}
+
+/* ===== Individual Strength Item ===== */
+.strength-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  cursor: pointer;
+}
+
+.strength-item:hover {
+  transform: translateY(-15px) scale(1.05);
+}
+
+/* ===== Glass Circle ===== */
+.glass-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  /* Glass effect with displacement */
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.03) 100%
+  );
+  backdrop-filter: url(#glass);
+  -webkit-backdrop-filter: url(#glass);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+      0 8px 32px 0 rgba(99, 102, 241, 0.2),
+      inset 0 2px 10px rgba(255, 255, 255, 0.3);
+  
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+
+.strength-item:hover .glass-circle {
+  transform: scale(1.1);
+  box-shadow: 
+      0 12px 40px 0 rgba(99, 102, 241, 0.35),
+      inset 0 2px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* ===== Icon Wrapper ===== */
+.icon-wrapper {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* ===== Strength Label ===== */
+.strength-label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2d3748;
+  text-align: center;
+  max-width: 150px;
+  line-height: 1.3;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* ===== Individual Glow Colors ===== */
+.strength-item:nth-child(1) .glass-circle {
+  box-shadow: 
+      0 8px 32px 0 rgba(99, 102, 241, 0.25),
+      inset 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+.strength-item:nth-child(2) .glass-circle {
+  box-shadow: 
+      0 8px 32px 0 rgba(139, 92, 246, 0.25),
+      inset 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+.strength-item:nth-child(3) .glass-circle {
+  box-shadow: 
+      0 8px 32px 0 rgba(99, 102, 241, 0.25),
+      inset 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+.strength-item:nth-child(4) .glass-circle {
+  box-shadow: 
+      0 8px 32px 0 rgba(124, 58, 237, 0.25),
+      inset 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+.strength-item:nth-child(5) .glass-circle {
+  box-shadow: 
+      0 8px 32px 0 rgba(91, 33, 182, 0.25),
+      inset 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .strengths-container {
+      gap: 35px;
+  }
+
+  .glass-circle {
+      width: 120px;
+      height: 120px;
+  }
+
+  .icon-wrapper {
+      font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #strengths {
+      padding: 80px 20px;
+  }
+
+  .strengths-container {
+      gap: 25px;
+  }
+
+  .glass-circle {
+      width: 100px;
+      height: 100px;
+  }
+
+  .icon-wrapper {
+      font-size: 2.5rem;
+  }
+
+  .strength-label {
+      font-size: 1rem;
+      max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .strengths-container {
+      gap: 15px;
+  }
+
+  .glass-circle {
+      width: 85px;
+      height: 85px;
+  }
+
+  .icon-wrapper {
+      font-size: 2rem;
+  }
+
+  .strength-label {
+      font-size: 0.9rem;
+      max-width: 100px;
+  }
+}

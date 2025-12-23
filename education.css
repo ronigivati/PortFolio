@@ -1,0 +1,144 @@
+/* =======================================================
+   🎓 EDUCATION SECTION — CLEAN & CENTERED
+======================================================= */
+
+#education {
+ 
+  max-width: 1100px;
+  margin: 0 auto;          /* 👈 בלי רווח מלמעלה */
+  background: #ffffff;
+  padding: 80px 40px;      /* הרווח הפנימי כבר דואג למרחק מהכותרת */
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(145, 140, 140, 0.4);
+}
+
+
+/* Title animation */
+.spark-title {
+  
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.spark-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes writeLetter {
+  0% { opacity: 0; transform: translateY(10px); }
+  60% { opacity: 1; text-shadow: 0 0 12px rgb(255, 0, 0); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes deleteLetter {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Card */
+.edu-card {
+   display: inline-block;
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #403c3c, #ffffff);
+  padding: 40px 50px;
+  border-radius: 14px;
+  border: 1px solid #252525;
+  box-shadow: 0 8px 25px rgba(200, 193, 193, 0.4);
+  text-align: left;
+}
+
+.edu-title {
+   
+  font-size: 1.6rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.edu-institute {
+  color: #666;
+  margin-bottom: 14px;
+}
+
+.edu-desc {
+  color: #333;
+  line-height: 1.7;
+}
+
+/* =======================================================
+   Tools & Skills Carousel
+======================================================= */
+
+#tools {
+  
+  max-width: 1100px;
+  margin: 60px auto;
+  background: #f7f7f8;
+  padding: 100px 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.07);
+}
+
+#tools h2 {
+  
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+  font-family: "ivyPresto Display", serif;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  padding: 28px 0;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+.track {
+  display: flex;
+  gap: 64px;
+  width: max-content;
+  animation: scroll 26s linear infinite;
+}
+
+.logo-card {
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 20px;
+  min-width: 160px;
+  transition: .25s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.1);
+}
+
+.tools-skills .logo {
+  height: 120px;
+  object-fit: contain;
+}
+
+.tools-skills.logo-name {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

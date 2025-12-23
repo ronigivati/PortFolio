@@ -1,0 +1,186 @@
+html { overflow-x: hidden; }
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background: transparent;
+    
+}
+
+#contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 120px;
+}
+
+
+
+/* Card */
+.card {
+  
+    margin: -50 auto;       /* ממרכז */
+
+    width: 400px;
+    height: 420px;
+    background: white;
+    border-radius: 100px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: 0.7s ease-in-out;
+    position: relative;
+    text-align: center;
+}
+
+.card.active {
+    height: 520px;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 150px;
+    background-image: url("https://snap-photos.s3.amazonaws.com/img-thumbs/960w/RQ2Z75PQIN.jpg");
+    background-size: cover;
+    transition: 0.7s;
+}
+.banner.active { height: 0; }
+
+/* Profile Image */
+.photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: -70px auto 0;
+    background-image: url("../img/Contant.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+    transition: 0.7s;
+}
+.photo.active { margin-top: -150px; }
+
+/* Name + Role */
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    transition: 0.7s;
+}
+.card ul.active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Button */
+button.contact {
+    width: 100%;
+    height: 38px;
+    background: #c7d0e1;
+    border: none;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+button.contact:hover {
+    background: #aab4c4;
+    cursor: pointer;
+}
+
+/* Social Icons */
+.social-media-banner {
+    opacity: 1;
+    transition: 0.7s;
+    margin-top: 15px;
+}
+.social-media-banner.active {
+    opacity: 0;
+    visibility: hidden;
+}
+.social-media-banner i {
+    font-size: 22px;
+    margin: 0 10px;
+    color: #9099a7;
+    transition: 0.3s;
+}
+.social-media-banner i:hover {
+    color: #333;
+}
+
+/* Form */
+.email-form {
+    height: 0;
+    overflow: hidden;
+    transition: 0.7s ease;
+    opacity: 0;
+}
+.email-form.active {
+    height: 290px;
+    opacity: 1;
+    padding-top: 20px;
+}
+
+.email-form input,
+.email-form textarea {
+    width: 220px;
+    margin: 10px auto;
+    padding: 8px;
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+textarea {
+    height: 90px;
+    resize: none;
+}
+
+/* Send Button */
+.send-btn {
+    margin-top: 15px;
+    background: #c7d0e1;
+}
+
+/* דמות ב-contact – אפקט פרימיום */
+.photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-image: url("../img/Contant.png");
+    background-size: cover;
+    background-position: center;
+
+    /* תנועה + עומק בסיסית */
+    animation: avatarFloating 5s ease-in-out infinite;
+
+    /* מעבר חלק */
+    transition: 
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        filter 0.45s ease;
+    
+    /* צל פנימי */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Hover – אפקט "POP" יוקרתי */
+.photo:hover {
+    transform: scale(1.22) rotateZ(2deg);
+    box-shadow: 
+        0 12px 28px rgba(0,0,0,0.25),
+        0 0 18px rgba(64, 111, 243, 0.35); /* glow כחול UX */
+    filter: brightness(1.08);
+}
+
+
+/* --- אנימציה חיה ייחודית --- */
+@keyframes avatarFloating {
+    0%   { transform: translate(0, 0) rotateZ(0deg); }
+    15%  { transform: translate(6px, -4px) rotateZ(2deg); }
+    35%  { transform: translate(12px, 2px) rotateZ(-2deg); }
+    55%  { transform: translate(-4px, 6px) rotateZ(1deg); }
+    75%  { transform: translate(-10px, -4px) rotateZ(-3deg); }
+    100% { transform: translate(0, 0) rotateZ(0deg); }
+}
